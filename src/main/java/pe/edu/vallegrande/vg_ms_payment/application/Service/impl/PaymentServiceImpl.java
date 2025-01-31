@@ -155,7 +155,7 @@ public class PaymentServiceImpl implements PaymentService {
         log.debug("Obteniendo detalles del Manager con ID: {}", managerId);
         return webClientBuilder.build()
                 .get()
-                .uri("https://vg-ms-manager-production-6f6d.up.railway.app/public/manager/api/v1/" + managerId)
+                .uri("https://advisory-jessalin-proyect-angel2025-b0b6aa9e.koyeb.app/public/manager/api/v1/" + managerId)
                 .retrieve()
                 .bodyToMono(ManagerDTO.class)
                 .doOnError(e -> log.error("Error al obtener detalles del Manager con ID: {}. Error: {}", managerId, e.getMessage(), e));
